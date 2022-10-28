@@ -1,0 +1,129 @@
+Q.1 git commands
+
+1. ls - to check the directory
+2. mkdir - to create a folder
+3. cd - to check in which folder we are in
+4. git init -  to Initialized empty Git repository in
+5. ls .git - to check hidden git folder
+6. git status - to check the satus of the files in reporsioty
+7. touch example.txt - to add file in the directory
+8. git add example.txt - to add file in staging area
+9. git commit -m "file name" - to commit 
+10. vi example.txt - to go inside the file
+11. to come out of the folder - hit esc  then shift: wq!
+12. cat example.js - to check what is there inside the file/ check the content  of the file
+13. git restore --example names.txt - to remove the recent changes
+14. git log - to check the history of commits
+15. git stash- to Save changes in backstage working directory
+16. rm Subjects.js - to delete a file
+17. cd main directtory/folder/folder2
+18. git checkout -b name - to create a branch
+19. git push origin /branchname/main/master
+20. git pull - pulls the changes from remote repo
+21. dir *.txt - to find a txt file
+22. esc - shift=colan wq! - to come out of a txt file and save the content
+23. grep -c "Elie" instructors.txt - find a txt file
+24. grep -ni "z.*" instructors.txt to find a specific letter in the txt file 
+25. git remote add git@github.com:exponentsoftware/divyaparyani67_tep-challenge-10002-finding-files.git
+
+
+
+
+
+Q.2 git & github difference
+
+Git: Git is a distributed version control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows. 
+
+GitHub: GitHub is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. 
+
+
+
+Q.3 Git Work Flow
+
+The Workflow Cheat Sheet
+Common console commands: 
+ cd - change directory
+ mkdir - make directory
+ ls - view the files/folders in directory
+
+NOTE: Exit VIM if needed ctrl + c then type :qa! and push enter
+NOTE: If file is not in local repo, manually move the file into 
+       the correct folder (outside of console)
+
+--------------------------------------------
+ Managing your Local Repo
+--------------------------------------------
+NOTE: If you need to hard reset your local repo to match 
+       the remote master use the following commands:
+ $ git fetch origin
+ $ git reset --hard origin/master
+ 
+Undo the act of committing, leaving everything else intact:
+ $ git reset --soft HEAD^:
+
+Undo the act of committing and everything you'd staged, 
+but leave the work tree (your files intact):
+ $ git reset HEAD^
+
+Completely undo it, throwing away all uncommitted changes,
+ resetting everything to the previous commit:
+ $ git reset --hard HEAD^
+ 
+--------------------------------------------  
+ BEGIN WORKFLOW
+-------------------------------------------- 
+Clone the Repo to local machine:
+ $ git clone https://github.com/user_name/repo_name.git
+ 
+Make sure the local master is up-to-date:
+ $ git pull origin main
+
+Create new branch:
+ $ git banch branch_name
+ 
+Move to branch:
+ $ git checkout branch_name
+ 
+Navigate file structure as needed:
+ $ ls 
+ $ cd folder_name
+ 
+Add the files to the branch:
+ $ git add .
+ 
+Verify file: 
+ $ git status
+ 
+Commit the files:
+ $ git commit -m "comment"
+ 
+Add branch and files to the Remote Repo:
+ $ git push -u origin branch_name
+ 
+Go to the github website to manage pull request and merge. 
+ 
+Switch back to local master so you can delete the local branch:
+ $ git checkout main
+ 
+Delete local branch: 
+ $ git branch -d branch_name
+ OR 
+ $ git branch -D branch_name
+ 
+ If you don't want to go to the website, you can merge your branch 
+ to the master locally and push the new master to the remote repo:
+ 
+Switch back to master branch:
+ $ git checkout main
+ 
+Merge the branch with the local master:
+ $ git merge branch_name -m "comment"
+ 
+Push the local master to the remote master:
+ $ git push origin main
+ 
+Delete local branch: 
+ $ git branch -d branch_name
+ OR 
+ $ git branch -D branch_name
+

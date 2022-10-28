@@ -1,3 +1,6 @@
+// arrays in js
+
+
 // splice
 // sort
 // pop
@@ -8,7 +11,7 @@
 // basic ajax Disadvantages and advantages (code writing)
 // random function  
 // strict  
-// arrays in js
+
 // Https request in ajax Status in ajax HTML - 
 // Testing in Javascript 
 // Functions 
