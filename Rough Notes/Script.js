@@ -50,7 +50,15 @@
 
 //*************
  
-// strict In a function, in strict mode, this is undefined.
+/*strict In a function, in strict mode, this is undefined. Strict mode makes it easier to write "secure" JavaScript.
+
+Strict mode changes previously accepted "bad syntax" into real errors.
+
+As an example, in normal JavaScript, mistyping a variable name creates a new global variable. In strict mode, this will throw an error, making it impossible to accidentally create a global variable.
+
+In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties.
+
+In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error.
 
  
 // AJAX is a developer's dream, because you can: 
@@ -59,9 +67,16 @@
 // Receive data from a server - after the page has loaded
 // Send data to a server - in the background
  
-// Jquery
+// Jquery $ sign is just a valid javascript identifier which is used as an alias for jQuery.
 
-// Https request in ajax Status in ajax HTML - 
+// Https request in ajax  - The XMLHttpRequest object is used to exchange data with a server.To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:
+//Status in ajax HTML -  The onreadystatechange Property
+The readyState property holds the status of the XMLHttpRequest.
+The onreadystatechange property defines a function to be executed when the readyState changes.
+The status property and the statusText property holds the status of the XMLHttpRequest object.
+
+http status- HTTP response status codes indicate whether a specific HTTP request has been successfully completed.
+
 // Testing in Javascript 
 // Functions 
 // Understanding of Asycnhronous behaviour 
@@ -85,7 +100,7 @@
 //iterators and generators
 
 //arrow function It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword:
-let myFunction = (a, b) => a * b;
+//let myFunction = (a, b) => a * b;
 
 //window.onload function Execute a JavaScript immediately after a page has been loaded:
 
@@ -124,3 +139,31 @@ function findevennumbers() {
 findevennumbers();
 console.log(findevennumbers());
 
+//async and await ... async and await make promises easier to write" async makes a function return a Promise await makes a function wait for a Promise
+
+const getData = async() => {
+  var y = await "Hello World";
+  console.log(y);
+}
+
+console.log(1);
+getData();
+console.log(2);
+
+
+promises - Promises are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code. 
+A Promise has four states: 
+fulfilled: Action related to the promise succeeded
+rejected: Action related to the promise failed
+pending: Promise is still pending i.e. not fulfilled or rejected yet
+settled: Promise has fulfilled or rejected
+
+Benefits of Promises 
+Improves Code Readability
+Better handling of asynchronous operations
+Better flow of control definition in asynchronous logic
+Better Error Handling
+
+var promise = new Promise(function(resolve, reject){
+     //do something
+});
